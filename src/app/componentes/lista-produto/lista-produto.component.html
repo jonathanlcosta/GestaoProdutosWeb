@@ -1,0 +1,27 @@
+<div class="container mt-5">
+  <h2 class="text-center mb-5">Lista de Produtos</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Código</th>
+        <th scope="col">Descrição</th>
+        <th scope="col">Data de Fabricação</th>
+        <th scope="col">Data de Validade</th>
+        <th scope="col">Fornecedor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let produto of produtos.registros ">
+        <th scope="row">{{produto.codigo}}</th>
+        <td>{{produto.descricao}}</td>
+        <td>{{produto.dataFabricacao | date:'dd/MM/yyyy'}}</td>
+        <td>{{produto.dataValidade | date:'dd/MM/yyyy'}}</td>
+        <td>{{produto.fornecedor.descricao}}</td>
+        <td>
+          <a href="#" class="btn btn-secondary mr-2" routerLink="/editarProduto/{{produto.codigo}}">Editar</a>
+          <a href="#" class="btn btn-danger" routerLink="/produtos/excluirProduto/{{produto.codigo}}">Excluir</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

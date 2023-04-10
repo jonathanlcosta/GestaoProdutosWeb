@@ -1,0 +1,20 @@
+<div class="container mt-5">
+    <h2 class="text-center mb-5">Fornecedores Cadastrados</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Descrição</th>
+          <th scope="col">CNPJ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let fornecedor of fornecedores.registros ">
+          <th scope="row">{{fornecedor.id}}</th>
+          <td>{{fornecedor.descricao}}</td>
+          <td>{{fornecedor.cnpj}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
