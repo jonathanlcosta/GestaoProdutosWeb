@@ -18,7 +18,7 @@
         <td>{{produto.dataValidade | date:'dd/MM/yyyy'}}</td>
         <td>{{produto.fornecedor.descricao}}</td>
         <td>
-          <a href="#" class="btn btn-secondary mr-2" routerLink="/editarProduto/{{produto.codigo}}">Editar</a>
+          <a href="#" class="btn btn-secondary mr-2 botao-salvar" routerLink="/editarProduto/{{produto.codigo}}">Editar</a>
           <a href="#" class="btn btn-danger" routerLink="/produtos/excluirProduto/{{produto.codigo}}">Excluir</a>
         </td>
       </tr>
