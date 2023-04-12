@@ -23,7 +23,7 @@
               <p >Preencha o CNPJ corretamente</p>
           </span>
           </div>        
-        <button type="submit" class="btn btn-primary mr-2 botao-salvar" (click)="cadastrarFornecedor()">Cadastrar Fornecedor</button>
+        <button type="submit" class="btn btn-primary mr-2 botao-salvar" [disabled]="!formulario.valid" (click)="cadastrarFornecedor()">Cadastrar Fornecedor</button>
         <button type="button" class="btn btn-secondary botao-cancelar" (click)="cancelar()">Cancelar</button>
       </form>
     </div>
