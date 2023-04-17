@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ProdutoService } from '../produto/produto.service';
+import { ProdutoService } from '../produto.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({

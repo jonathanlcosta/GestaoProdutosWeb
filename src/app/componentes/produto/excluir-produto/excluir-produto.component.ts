@@ -1,7 +1,7 @@
 import { ActivatedRoute, Router } from '@angular/router';
-import { ProdutoService } from '../produto/produto.service';
+import { ProdutoService } from '../produto.service';
 import { Component } from '@angular/core';
-import { ProdutoResponse } from '../produto/produtoResponse';
+import { ProdutoResponse } from '../produtoResponse';
 
 @Component({
   selector: 'app-excluir-produto',
