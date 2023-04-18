@@ -68,12 +68,12 @@ export class EditarProdutoComponent {
     editarProduto() {
       if(this.formulario.valid){
         this.service.editarProduto(this.formulario.value).subscribe(() => {
-          this.router.navigate(['/listarProduto'])
+          this.router.navigate(['/produtos/lista'])
         })
       }
     }
   
     cancelar() {
-      this.router.navigate(['/listarProduto'])
+      this.router.navigate(['/produtos/lista'])
     }
 }

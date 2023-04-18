@@ -43,12 +43,12 @@ export class ExcluirProdutoComponent {
     excluirProduto() {
       if(this.produto.codigo) {
         this.service.excluirProduto(this.produto.codigo).subscribe(() => {
-          this.router.navigate(['/listarProduto'])
+          this.router.navigate(['/produtos/lista'])
         })
       }
     }
   
     cancelar() {
-      this.router.navigate(['/listarProduto'])
+      this.router.navigate(['/produtos/lista'])
     }
 }
