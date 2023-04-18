@@ -44,13 +44,13 @@ export class CadastrarFornecedorComponent {
     cadastrarFornecedor() {
       if(this.formulario.valid){
         this.service.cadastrarFornecedor(this.formulario.value).subscribe(() => {
-          this.router.navigate(['/listarFornecedor'])
+          this.router.navigate(['/fornecedores/listar'])
         })
       }
     }
   
     cancelar() {
-      this.router.navigate(['/listarFornecedor'])
+      this.router.navigate(['/fornecedores/listar'])
     }
   
 }
