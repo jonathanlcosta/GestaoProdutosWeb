@@ -54,13 +54,13 @@ export class CadastrarProdutoComponent {
     cadastrarProduto() {
       if(this.formulario.valid){
         this.service.cadastrarProduto(this.formulario.value).subscribe(() => {
-          this.router.navigate(['/listarProduto'])
+          this.router.navigate(['/produtos/lista'])
         })
       }
     }
   
     cancelar() {
-      this.router.navigate(['/listarProduto'])
+      this.router.navigate(['/produtos/lista'])
     }
   
 
