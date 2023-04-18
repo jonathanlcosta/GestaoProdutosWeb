@@ -3,11 +3,9 @@ import { CommonModule } from '@angular/common';
 import { MenuComponent } from './menu/menu.component';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from 'src/app/app-routing.module';
+import {  CoreRoutingModule } from 'src/app/core/core-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ProdutoRoutingModule } from '../produto/produto-routing.module';
-import { ProdutoModule } from '../produto/produto.module';
 
 
 
@@ -17,7 +15,7 @@ import { ProdutoModule } from '../produto/produto.module';
     CommonModule, 
     RouterModule,
     BrowserModule,
-    AppRoutingModule,
+    CoreRoutingModule,
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule
