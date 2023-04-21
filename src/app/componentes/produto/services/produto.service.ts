@@ -1,9 +1,9 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, map } from 'rxjs';
-import { PaginacaoRequest } from '../util/paginacaoRequest';
-import { PaginacaoConsulta } from '../util/paginacaoConsulta';
-import { ProdutoResponse } from './produtoResponse';
+import { PaginacaoRequest } from '../../util/paginacaoRequest';
+import { PaginacaoConsulta } from '../../util/paginacaoConsulta';
+import { ProdutoResponse } from '../models/produtoResponse';
 
 @Injectable({
   providedIn: 'root'

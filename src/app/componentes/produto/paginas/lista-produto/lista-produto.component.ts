@@ -1,10 +1,10 @@
 import { Component, ViewChild } from '@angular/core';
-import { ProdutoService } from '../produto.service';
+import { ProdutoService } from '../../services/produto.service';
 import { NgForm } from '@angular/forms';
-import { PaginacaoRequest } from '../../util/paginacaoRequest';
+import { PaginacaoRequest } from '../../../util/paginacaoRequest';
 import { HttpParams } from '@angular/common/http';
-import { ProdutoResponse } from '../produtoResponse';
-import { PaginacaoConsulta } from '../../util/paginacaoConsulta';
+import { ProdutoResponse } from '../../models/produtoResponse';
+import { PaginacaoConsulta } from '../../../util/paginacaoConsulta';
 
 @Component({
   selector: 'app-lista-produto',
@@ -12,7 +12,7 @@ import { PaginacaoConsulta } from '../../util/paginacaoConsulta';
   styleUrls: ['./lista-produto.component.css']
 })
 export class ListaProdutoComponent {
-  @ViewChild('form') form: NgForm;
+form: NgForm;
 
   paginacaoRequest: PaginacaoRequest = new PaginacaoRequest({});
   produtos!: PaginacaoConsulta<ProdutoResponse>;

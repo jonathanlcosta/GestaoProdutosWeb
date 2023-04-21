@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, Validators } from '@angular/forms';
-import { FornecedorService } from '../fornecedor.service';
+import { FornecedorService } from '../../services/fornecedor.service';
 import { Router } from '@angular/router';
 
 @Component({

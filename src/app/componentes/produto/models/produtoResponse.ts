@@ -1,4 +1,4 @@
-import { FornecedorResponse } from "../fornecedor/fornecedorResponse";
+import { FornecedorResponse } from "../../fornecedor/models/fornecedorResponse";
 
 export class ProdutoResponse {
 

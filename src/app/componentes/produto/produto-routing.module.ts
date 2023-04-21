@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CadastrarProdutoComponent } from './cadastrar-produto/cadastrar-produto.component';
-import { EditarProdutoComponent } from './editar-produto/editar-produto.component';
-import { ExcluirProdutoComponent } from './excluir-produto/excluir-produto.component';
-import { ListaProdutoComponent } from './lista-produto/lista-produto.component';
+import { CadastrarProdutoComponent } from './paginas/cadastrar-produto/cadastrar-produto.component';
+import { EditarProdutoComponent } from './paginas/editar-produto/editar-produto.component';
+import { ExcluirProdutoComponent } from './paginas/excluir-produto/excluir-produto.component';
+import { ListaProdutoComponent } from './paginas/lista-produto/lista-produto.component';
 
 const routes: Routes = [
   {path: 'cadastrar', component: CadastrarProdutoComponent},

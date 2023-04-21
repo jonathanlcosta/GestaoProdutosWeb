@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ListaProdutoComponent } from './lista-produto/lista-produto.component';
-import { CadastrarProdutoComponent } from './cadastrar-produto/cadastrar-produto.component';
-import { ExcluirProdutoComponent } from './excluir-produto/excluir-produto.component';
-import { EditarProdutoComponent } from './editar-produto/editar-produto.component';
+import { ListaProdutoComponent } from './paginas/lista-produto/lista-produto.component';
+import { CadastrarProdutoComponent } from './paginas/cadastrar-produto/cadastrar-produto.component';
+import { ExcluirProdutoComponent } from './paginas/excluir-produto/excluir-produto.component';
+import { EditarProdutoComponent } from './paginas/editar-produto/editar-produto.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';

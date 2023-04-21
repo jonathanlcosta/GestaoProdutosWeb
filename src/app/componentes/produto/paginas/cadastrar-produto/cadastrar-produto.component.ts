@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ProdutoService } from '../produto.service';
+import { ProdutoService } from '../../services/produto.service';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 

@@ -1,9 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { PaginacaoRequest } from '../../util/paginacaoRequest';
-import { PaginacaoConsulta } from '../../util/paginacaoConsulta';
-import { FornecedorResponse } from '../fornecedorResponse';
-import { FornecedorService } from '../fornecedor.service';
+import { PaginacaoRequest } from '../../../util/paginacaoRequest';
+import { PaginacaoConsulta } from '../../../util/paginacaoConsulta';
+import { FornecedorResponse } from '../../models/fornecedorResponse';
+import { FornecedorService } from '../../services/fornecedor.service';
 import { HttpParams } from '@angular/common/http';
 
 @Component({
@@ -12,7 +12,7 @@ import { HttpParams } from '@angular/common/http';
   styleUrls: ['./listar-fornecedor.component.css']
 })
 export class ListarFornecedorComponent {
-  @ViewChild('form') form: NgForm;
+form: NgForm;
 
   paginacaoRequest: PaginacaoRequest = new PaginacaoRequest({});
   fornecedores!: PaginacaoConsulta<FornecedorResponse>;

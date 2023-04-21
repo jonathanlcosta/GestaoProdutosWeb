@@ -1,7 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { PaginacaoConsulta } from '../util/paginacaoConsulta';
-import { FornecedorResponse } from './fornecedorResponse';
+import { PaginacaoConsulta } from '../../util/paginacaoConsulta';
+import { FornecedorResponse } from '../models/fornecedorResponse';
 import { Observable } from 'rxjs';
 
 @Injectable({
