@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { ProdutoService } from '../../services/produto.service';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { PRODUTOS_FORM_CONFIG } from './formularios/produtos.form';
+import { ProdutoRequest } from '../../models/produto.request';
 
 @Component({
   selector: 'app-cadastrar-produto',
@@ -15,27 +17,12 @@ export class CadastrarProdutoComponent {
   constructor(private service: ProdutoService,
     private router: Router,
     private formBuilder: FormBuilder
-    ) { }
+    ) { 
+      this.formulario = new FormGroup({})
+    }
 
     ngOnInit(): void {
-      this.formulario = this.formBuilder.group({
-        descricao: ['', Validators.compose([
-          Validators.required,
-          Validators.pattern(/^.+$/)
-        ])],
-        dataValidade: ['', Validators.compose([
-          Validators.required,
-          Validators.minLength(10)
-        ])],
-        dataFabricacao: ['', Validators.compose([
-          Validators.required,
-          Validators.minLength(10)
-        ])],
-        idFornecedor: ['', Validators.compose([
-          Validators.required,
-          Validators.minLength(1)
-        ])],
-      }, { validator: this.validarDatas });
+     this.inicializarFormulario();
     }
 
     validarDatas(formGroup: FormGroup) {
@@ -50,10 +37,23 @@ export class CadastrarProdutoComponent {
           formGroup.get('dataFabricacao')?.setErrors(null);
       }
   }
+
+  inicializarFormulario(){
+    this.formulario = this.formBuilder.group(PRODUTOS_FORM_CONFIG);
+  }
+
+  organizaRequest(){
+    const request = new ProdutoRequest({});
+    request.Descricao = this.formulario.value.Descricao;
+    request.DataFabricacao = this.formulario.value.DataFabricacao;
+    request.DataValidade = this.formulario.value.DataValidade;
+    request.IdFornecedor = this.formulario.value.IdFornecedor;
+    return request;
+  }
   
     cadastrarProduto() {
       if(this.formulario.valid){
-        this.service.cadastrarProduto(this.formulario.value).subscribe(() => {
+        this.service.cadastrarProduto(this.organizaRequest()).subscribe(() => {
           this.router.navigate(['/produtos/lista'])
         })
       }

@@ -9,35 +9,35 @@
       <form [formGroup]="formulario">
         <div class="form-group">
           <label for="produtoTitulo">Descrição Produto</label>
-          <input type="text" class="form-control" id="produtoDescricao" name="descricao" placeholder="Insira a descricao do produto" formControlName="descricao"
-          [ngClass]="{'is-invalid': formulario.get('descricao').errors && (formulario.get('descricao').dirty || formulario.get('descricao').touched) }" >
-          <span class="text-danger" *ngIf="formulario.get('descricao').errors && (formulario.get('descricao').dirty || formulario.get('descricao').touched)" >
+          <input type="text" class="form-control" id="produtoDescricao" name="Descricao" placeholder="Insira a Descricao do produto" formControlName="Descricao"
+          [ngClass]="{'is-invalid': formulario.get('Descricao').errors && (formulario.get('Descricao').dirty || formulario.get('Descricao').touched) }" >
+          <span class="text-danger" *ngIf="formulario.get('Descricao').errors && (formulario.get('Descricao').dirty || formulario.get('Descricao').touched)" >
             <p >Preencha o campo descrição</p>
         </span>
         </div>      
         <div class="form-group">
           <label for="produtoDataFabricacao">Data de Fabricação</label>
-          <input type="date" class="form-control" id="produtoDataFabricacao" name="data" formControlName="dataFabricacao"
-                 [ngClass]="{'is-invalid': formulario.get('dataFabricacao').errors && formulario.get('dataFabricacao').touched}">
-          <span class="text-danger" *ngIf="formulario.get('dataFabricacao').invalid && formulario.get('dataFabricacao').touched">
-            {{ formulario.get('dataFabricacao').hasError('required') ? 'Campo obrigatório' : 'Data inválida' }}
-            {{ formulario.get('dataFabricacao').hasError('invalidRange') ? '- Data de fabricação não pode ser igual ou maior que a data de validade' : '' }}
+          <input type="date" class="form-control" id="produtoDataFabricacao" name="data" formControlName="DataFabricacao"
+                 [ngClass]="{'is-invalid': formulario.get('DataFabricacao').errors && formulario.get('DataFabricacao').touched}">
+          <span class="text-danger" *ngIf="formulario.get('DataFabricacao').invalid && formulario.get('DataFabricacao').touched">
+            {{ formulario.get('DataFabricacao').hasError('required') ? 'Campo obrigatório' : 'Data inválida' }}
+            {{ formulario.get('DataFabricacao').hasError('invalidRange') ? '- Data de fabricação não pode ser igual ou maior que a data de validade' : '' }}
           </span>
         </div>
         <div class="form-group">
           <label for="produtoDataValidade">Data de Validade</label>
-          <input type="date" class="form-control" id="produtoDataValidade" name="data" formControlName="dataValidade"
-                 [ngClass]="{'is-invalid': formulario.get('dataValidade').errors && formulario.get('dataValidade').touched}">
-          <span class="text-danger" *ngIf="formulario.get('dataValidade').invalid && formulario.get('dataValidade').touched">
-            {{ formulario.get('dataValidade').hasError('required') ? 'Campo obrigatório' : 'Data inválida' }}
-            {{ formulario.get('dataValidade').hasError('invalidRange') ? '- Data de validade não pode ser igual ou menor que a data de fabricação' : '' }}
+          <input type="date" class="form-control" id="produtoDataValidade" name="data" formControlName="DataValidade"
+                 [ngClass]="{'is-invalid': formulario.get('DataValidade').errors && formulario.get('DataValidade').touched}">
+          <span class="text-danger" *ngIf="formulario.get('DataValidade').invalid && formulario.get('DataValidade').touched">
+            {{ formulario.get('DataValidade').hasError('required') ? 'Campo obrigatório' : 'Data inválida' }}
+            {{ formulario.get('DataValidade').hasError('invalidRange') ? '- Data de validade não pode ser igual ou menor que a data de fabricação' : '' }}
           </span>
         </div>
         <div class="form-group">
           <label for="produtoFornecedorId">ID do Fornecedor</label>
-          <input type="number" class="form-control" id="produtoFornecedorId" name="produtoFornecedorId" placeholder="Insira um ID do fornecedor" formControlName="idFornecedor"
-          [ngClass]="{'is-invalid': formulario.get('idFornecedor').errors && (formulario.get('idFornecedor').dirty || formulario.get('idFornecedor').touched) }">
-          <span class="text-danger" *ngIf="formulario.get('idFornecedor').errors && (formulario.get('idFornecedor').dirty || formulario.get('idFornecedor').touched)" >
+          <input type="number" class="form-control" id="produtoFornecedorId" name="produtoFornecedorId" placeholder="Insira um ID do fornecedor" formControlName="IdFornecedor"
+          [ngClass]="{'is-invalid': formulario.get('IdFornecedor').errors && (formulario.get('IdFornecedor').dirty || formulario.get('IdFornecedor').touched) }">
+          <span class="text-danger" *ngIf="formulario.get('IdFornecedor').errors && (formulario.get('IdFornecedor').dirty || formulario.get('IdFornecedor').touched)" >
             <p >Preencha o ID do fornecedor</p>
         </span>
         </div>        

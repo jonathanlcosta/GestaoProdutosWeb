@@ -4,6 +4,7 @@ import { Observable, map } from 'rxjs';
 import { PaginacaoRequest } from '../../util/paginacaoRequest';
 import { ProdutoResponse } from '../models/produtoResponse';
 import { PaginacaoResponse } from '../../util/paginacaoConsulta';
+import { ProdutoRequest } from '../models/produto.request';
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +20,7 @@ export class ProdutoService {
       { params }
     );
   }
-  cadastrarProduto(produto: ProdutoResponse): Observable<ProdutoResponse> {
+  cadastrarProduto(produto: ProdutoRequest): Observable<ProdutoResponse> {
       return this.http.post<ProdutoResponse>(this.API, produto)
   }
 
