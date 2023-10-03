@@ -1,10 +1,10 @@
-export class PaginacaoConsulta<T> {
-  quantidade: number;
-  registros: Array<T>;
+export class PaginacaoResponse<T> {
+  Total: number;
+  Registros: Array<T>;
 
-  constructor(params: Partial<PaginacaoConsulta<T>>) {
-      this.quantidade = params.quantidade || null;
-      this.registros = params.registros || null;
+  constructor(params: Partial<PaginacaoResponse<T>>) {
+      this.Total = params.Total || null;
+      this.Registros = params.Registros || null;
       
   }
 }

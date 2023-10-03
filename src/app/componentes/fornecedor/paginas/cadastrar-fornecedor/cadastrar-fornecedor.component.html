@@ -9,18 +9,18 @@
       <form [formGroup]="formulario">
         <div class="form-group">
             <label for="fornecedorDescricao">Descrição</label>
-            <input type="text" class="form-control" id="fornecedorDescricao" name="descricao" placeholder="Insira a descricao do fornecedor" formControlName="descricao"
-            [ngClass]="{'is-invalid': formulario.get('descricao').errors && (formulario.get('descricao').dirty || formulario.get('descricao').touched) }" >
-            <span class="text-danger" *ngIf="formulario.get('descricao').errors && (formulario.get('descricao').dirty || formulario.get('descricao').touched)" >
+            <input type="text" class="form-control" id="fornecedorDescricao" name="Descricao" placeholder="Insira a Descricao do fornecedor" formControlName="Descricao"
+            [ngClass]="{'is-invalid': formulario.get('Descricao').errors && (formulario.get('Descricao').dirty || formulario.get('Descricao').touched) }" >
+            <span class="text-danger" *ngIf="formulario.get('Descricao').errors && (formulario.get('Descricao').dirty || formulario.get('Descricao').touched)" >
               <p >Preencha o campo descrição</p>
           </span>
           </div>        
         <div class="form-group">
-            <label for="fornecedorCnpj">CNPJ</label>
-            <input type="text" class="form-control" id="fornecedorCnpj" name="cnpj" placeholder="Insira o CNPJ do fornecedor com apenas numeros" formControlName="cnpj"
-            [ngClass]="{'is-invalid': formulario.get('cnpj').errors && (formulario.get('cnpj').dirty || formulario.get('cnpj').touched) }" >
-            <span class="text-danger" *ngIf="formulario.get('cnpj').errors && (formulario.get('cnpj').dirty || formulario.get('cnpj').touched)" >
-              <p >Preencha o CNPJ corretamente</p>
+            <label for="fornecedorCnpj">Cnpj</label>
+            <input type="text" class="form-control" id="fornecedorCnpj" name="Cnpj" placeholder="Insira o Cnpj do fornecedor com apenas numeros" formControlName="Cnpj"
+            [ngClass]="{'is-invalid': formulario.get('Cnpj').errors && (formulario.get('Cnpj').dirty || formulario.get('Cnpj').touched) }" >
+            <span class="text-danger" *ngIf="formulario.get('Cnpj').errors && (formulario.get('Cnpj').dirty || formulario.get('Cnpj').touched)" >
+              <p >Preencha o Cnpj corretamente</p>
           </span>
           </div>        
         <button type="submit" class="btn btn-primary mr-2 botao-salvar" [disabled]="!formulario.valid" (click)="cadastrarFornecedor()">Cadastrar Fornecedor</button>

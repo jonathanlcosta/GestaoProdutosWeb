@@ -2,8 +2,8 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, map } from 'rxjs';
 import { PaginacaoRequest } from '../../util/paginacaoRequest';
-import { PaginacaoConsulta } from '../../util/paginacaoConsulta';
 import { ProdutoResponse } from '../models/produtoResponse';
+import { PaginacaoResponse } from '../../util/paginacaoConsulta';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +14,7 @@ export class ProdutoService {
   protected API: string =  'http://localhost:5151/api/Produtos';
   
   recuperarProdutos(params: HttpParams) {
-    return this.http.get<PaginacaoConsulta<ProdutoResponse>>(
+    return this.http.get<PaginacaoResponse<ProdutoResponse>>(
       this.API,
       { params }
     );
